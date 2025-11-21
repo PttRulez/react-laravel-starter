@@ -5,10 +5,7 @@ import { Transition } from '@headlessui/react';
 import { Form, Link, usePage } from '@inertiajs/react';
 
 import FormInput from '@/components/form-elements/FormInput';
-import InputError from '@/components/form-elements/InputError';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import DeleteUser from '@/pages/settings/components/DeleteUser';
 import HeadingSmall from '@/pages/settings/components/HeadingSmall';
 import SettingsWrapper from '@/pages/settings/components/SettingsWrapper';
@@ -44,6 +41,7 @@ export default function Profile({
                                 placeholder="Ваше имя"
                                 defaultValue={auth.user.name}
                                 label="Имя"
+                                errorMessage={errors.name}
                             />
 
                             <FormInput
@@ -52,6 +50,7 @@ export default function Profile({
                                 type="email"
                                 defaultValue={auth.user.email}
                                 label="Ваш email"
+                                errorMessage={errors.email}
                             />
 
                             {mustVerifyEmail &&

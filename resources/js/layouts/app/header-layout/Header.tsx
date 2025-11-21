@@ -1,10 +1,9 @@
 import { Breadcrumbs } from '@/components/shared/Breadcrumbs';
 import DesktopMenu from '@/layouts/app/header-layout/DesktopMenu';
 import { MobileMenu } from '@/layouts/app/header-layout/MobileMenu';
-import AppLogo from '@/layouts/app/shared/AppLogo';
 import { home, login, register } from '@/routes';
 import { type BreadcrumbItem, type NavItem, type SharedData } from '@/types';
-import { Link, usePage } from '@inertiajs/react';
+import { usePage } from '@inertiajs/react';
 import { LayoutGrid, LogIn, UserRoundPlus } from 'lucide-react';
 
 interface AppHeaderProps {
